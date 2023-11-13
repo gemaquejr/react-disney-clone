@@ -8,8 +8,28 @@ const Header = (props) => {
             </Logo>
             <NavMenu>
                 <a href="/home">
-                    <img src="/images/home-icon.svg" alt="Disney+" />
+                    <img src="/images/home-icon.svg" alt="HOME" />
                     <span>HOME</span>       
+                </a>
+                <a href="/search">
+                    <img src="/images/search-icon.svg" alt="SEARCH" />
+                    <span>SEARCH</span>       
+                </a>
+                <a href="/watchlist">
+                    <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
+                    <span>WATCHLIST</span>       
+                </a>
+                <a href="/original">
+                    <img src="/images/original-icon.svg" alt="ORIGINALS" />
+                    <span>ORIGINALS</span>       
+                </a>
+                <a href="/movie">
+                    <img src="/images/movie-icon.svg" alt="MOVIES" />
+                    <span>MOVIES</span>       
+                </a>
+                <a href="/series">
+                    <img src="/images/serie-icon.svg" alt="SERIES" />
+                    <span>SERIES</span>       
                 </a>
             </NavMenu>
         </Nav>
