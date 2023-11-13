@@ -3,10 +3,12 @@ import React from "react";
 import Login from './components/Login/Login';
 
 import './App.css'
+import Header from './components/Header/Header';
 
 function App() {
   return(
     <div className='App'>
+      <Header />
       <Routes>
         <Route path="/Login" element={ <Login /> } />
         <Route exact path="/" element={ <Navigate to="/Login" /> } />
