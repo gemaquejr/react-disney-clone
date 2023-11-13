@@ -1,6 +1,17 @@
 import styled from "styled-components";
+import { signInWithGoogle } from "../../firebase";
 
 const Header = (props) => {
+    const handleAuth = () => {
+        signInWithGoogle()
+            .then((result) => {
+              console.log(result);
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        }
+
     return (
         <Nav>
             <Logo>
@@ -32,7 +43,7 @@ const Header = (props) => {
                     <span>SERIES</span>       
                 </a>
             </NavMenu>
-            <Login>Login</Login>
+            <Login onClick={handleAuth}>Login</Login>
         </Nav>
     );
 };
