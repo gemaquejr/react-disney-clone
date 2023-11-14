@@ -4,6 +4,7 @@ import Login from './components/Login/Login';
 
 import './App.css'
 import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 function App() {
   return(
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/Login" element={ <Login /> } />
         <Route exact path="/" element={ <Navigate to="/Login" /> } />
+        <Route path="/home" element={ <Home/> } />
       </Routes>
     </div>
   );
