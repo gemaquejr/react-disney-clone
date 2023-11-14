@@ -33,7 +33,7 @@ const Header = (props) => {
         const setUser = (user) => {
             dispatch(
                 setUserLoginDetails({
-                    name: user.diplayName,
+                    name: user.displayName,
                     email: user.email,
                     photo: user.photoURL,
                 })
