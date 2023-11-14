@@ -1,14 +1,24 @@
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-// import { useHistory } from 'react-router-dom'
-import { signInWithGoogle } from "../../firebase";
+import { useNavigate } from 'react-router-dom'
+import { auth, signInWithGoogle } from "../../firebase";
 import { selectUserName, selectUserPhoto, setUserLoginDetails } from "../../features/user/userSlice";
+import { useEffect } from "react";
 
 const Header = (props) => {
     const dispatch = useDispatch();
-    // const history = useHistory();
+    const navigate = useNavigate();
     const userName = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
+
+    useEffect(() => {
+        auth.onAuthStateChanged(async (user) => {
+          if (user) {
+            setUser(user);
+            navigate("/home");
+          }
+        });
+      }, [userName]);
 
     const handleAuth = () => {
         signInWithGoogle()
