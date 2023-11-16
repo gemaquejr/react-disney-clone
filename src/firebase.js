@@ -22,5 +22,6 @@ const storage = getStorage(app);
 
 const signInWithGoogle = () => signInWithPopup(auth, provider);
 
-export { app, auth, provider, storage, db, signInWithGoogle };
+export { app, auth, provider, storage, signInWithGoogle };
+export default db;
 
